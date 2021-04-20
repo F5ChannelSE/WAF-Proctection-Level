@@ -42,7 +42,7 @@ Launch BIG-IP 3nic stack
    +------------------------+--------------------------+
    | Image Name             | Best25Mbps               |
    +------------------------+--------------------------+
-   | BIG IP Modules         | **ltm:nominal,asm:nominal ** |                      
+   | BIG IP Modules         | ltm:nominal,asm:nominal  |                      
    +------------------------+--------------------------+           
    | Restricted Src Address | 0.0.0.0/0                |
    +------------------------+--------------------------+ 
