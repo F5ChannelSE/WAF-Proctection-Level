@@ -3,7 +3,7 @@ Restore BIG-IP LTM + AWAF
 
 #. Find the public IP addresses for BIG-IP
 
-   - search **f5student#bigip-mgmt-pip** to capture BIG-IP management public address
+   - search **f5student#bigip-mgmt-pip** to capture BIG-IP management public address (replace # with your student number)
    .. image:: ./images/searchbigip.png
      :height: 250px
 
