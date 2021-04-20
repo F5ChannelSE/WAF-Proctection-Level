@@ -24,7 +24,7 @@ Restore BIG-IP LTM + AWAF
    - browse to BIG-IP **system->archives** and click **upload**
    - select **Choose File** and select **wafbase.ucs** from the location you downloaded the file
    - click **wafbase.ucs** after uploaded
-   - enter **wafbase** for Restore Passphrase then click **Restore**.  This will take a few minutes to complete.
+   - enter **base** for Restore Passphrase then click **Restore**.  This will take a few minutes to complete.
 
 #. Explore BIG-IP configuration
 
