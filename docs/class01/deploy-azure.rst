@@ -54,7 +54,13 @@ Launch BIG-IP 3nic stack
 #. Click “Create” after confirming entries
 #. This will take appoximately 10 minutes
 
-   - You can monitor deployment on the azure dashboard by opening the Notifications in the azure portal
+   - You can monitor deployment on the azure dashboard by opening the Notifications in the azure portal.  Continue with the Lab. The deployment will complete by the time the BIG-IP configuration is required
 
-#. Continue with the Lab. The deployment will complete by the time the BIG-IP configuration is required
+#. Update Azure Network Security Group to allow required app ports
 
+   - browse to Azure portal and select **f5student#-rg** to view objects in your resource group
+   - search for **nsg** and select **f5student#-rg-ext-nsg** to view inbound and outbound rules
+   - click **Add** to **HTTPS** and **8081** to allow service ports **443** and **8081**
+
+   .. image:: ./images/extnsg.png
+     :height: 250px
