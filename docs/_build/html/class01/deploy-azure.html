@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<head>
+  
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PPZPQ6');</script>
+  <!-- End Google Tag Manager -->
+    <title>Deploy BIG-IP In Azure</title>
+  
+
+  <meta charset="utf-8">
+  <!-- Twitter Bootstrap viewport setting -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- F5 metadata -->
+  <meta name="title" content="Deploy BIG-IP In Azure"/>
+  <meta name="product" content="WAF - Identifying the level of protection required for applications"/>
+  <meta name="version" content=""/>
+  <meta name="updated_date"  content="2021-04-20 05:07:53"/>
+  <meta name="archived" content="Archived documents excluded"/>
+  <meta name="doc_type" content="Manual"/>
+  <meta name="lifecycle" content="release"/>
+  <meta name="WAF - Identifying the level of protection required for applications" content=""/>
+
+
+  
+
+  
+  <link href="https://cdn.f5.com/favicon.ico" rel="icon">
+
+</head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Deploy BIG-IP In Azure &#8212; WAF - Identifying the level of protection required for applications  documentation</title>
+    <link rel="stylesheet" href="../_static/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/f5.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/f5-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/CoveoFullSearch.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/21fb8a09c3.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Restore BIG-IP LTM + AWAF" href="restore-bigip.html" />
+    <link rel="prev" title="WAF - Identifying the level of protection required for applications" href="class01.html" /> 
+  </head><body>
+  <div id="clouddocs-header"></div>
+
+    <div id="sidebar" class="section-nav">
+      
+      <!--  version selector ------------------>
+      <div id="version_selector_wrapper">
+      </div>
+      <nav class="nav-sidebartoc">
+
+        
+         <h5>WAF - Identifying the level of protection required for applications  </h5>
+        
+
+        <hr>
+        <span class="nav-sidebartoc">
+            <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="class01.html">WAF - Identifying the level of protection required for applications</a></li>
+</ul>
+
+        </span><!-- Use this file to add extra links to the bottom of the ToC sidebar -->
+<hr>
+  <span class="nav-sidebartoc">
+ <!-- insert content here -->
+  </span>
+      </nav>
+    </div>
+
+
+    <div id="right-sidebar">
+      <h7 style="font-weight:normal">On this page:</h7>
+      <nav class="nav-sidebartoc">
+        <span class="nav-sidebartoc">
+            <ul>
+<li><a class="reference internal" href="#">Deploy BIG-IP In Azure</a><ul>
+<li><a class="reference internal" href="#launch-big-ip-3nic-stack">Launch BIG-IP 3nic stack</a></li>
+</ul>
+</li>
+</ul>
+
+         </span>
+      </nav>
+    </div>
+
+
+
+
+
+  
+  <div class="main active" id="content" >
+    <article class="docs-container site-article-inner">
+              <!-- custom breadcrumb -->
+        <h5>
+            <a href="../index.html">WAF - Identifying the level of protection required for applications</a>
+              &gt; <a href="class01.html">WAF - Identifying the level of protection required for applications</a>
+
+          <span class="right">
+             <a href="../_sources/class01/deploy-azure.rst.txt" rel="nofollow">Source</a> |
+          </span>
+        </h5>
+        <!-- end custom breadcrumb -->
+      
+
+
+    <!--a title="Export PDF" id="export-pdf" class="btn btn btn-link pull-right">View PDF</a-->
+    <button type="button" id="export-pdf" class="btn btn-link right">PDF</button>
+
+
+    
+     
+         <div class="sidebar" id="version-warning" style="display: none;">
+           <p class="first sidebar-title">
+           <span class="icon fa fa-info-circle fa-lg"></span> Version notice:</p>
+           <p class="last" id="currentVersion"></p>
+          </div>
+
+
+     <div role="main">
+        
+  <div class="section" id="deploy-big-ip-in-azure">
+<h1>Deploy BIG-IP In Azure<a class="headerlink" href="#deploy-big-ip-in-azure" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Please note that you will incur costs associated with creating Azure resources and
+consuming F5 BIG-IP marketplace offers if you are using your own Azure account.</p>
+</div>
+<div class="section" id="launch-big-ip-3nic-stack">
+<h2>Launch BIG-IP 3nic stack<a class="headerlink" href="#launch-big-ip-3nic-stack" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Browse to Github to access the F5 – Azure templates</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/F5Networks/f5-azure-arm-templates/tree/master/experimental/standalone/3nic/new-stack/payg">https://github.com/F5Networks/f5-azure-arm-templates/tree/master/experimental/standalone/3nic/new-stack/payg</a></li>
+<li>Scroll down and click Deploy to Azure button</li>
+</ul>
+<a class="reference internal image-reference" href="../_images/azuredeploy.png"><img alt="../_images/azuredeploy.png" src="../_images/azuredeploy.png" style="width: 412.0px; height: 154.4px;" /></a>
+</li>
+<li><p class="first">You will be redirected to portal.azure.com</p>
+</li>
+</ol>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>Replace the <strong>#</strong> sign with you student number when logging in and anywhere else you see <strong>f5student#</strong>.</p>
+<ul class="last simple">
+<li>Log into the azure portal when prompted</li>
+<li>Username : <a class="reference external" href="mailto:f5student#&#37;&#52;&#48;f5custlabs&#46;onmicrosoft&#46;com">f5student#<span>&#64;</span>f5custlabs<span>&#46;</span>onmicrosoft<span>&#46;</span>com</a></li>
+<li>Password:  ChangeMe123</li>
+</ul>
+</div>
+<ol class="arabic">
+<li><p class="first">Complete the Customized template using the following values <strong>(replace # with your student number to avoid conflicts)</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="48%" />
+<col width="52%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Resource Group</td>
+<td>Select Create New</td>
+</tr>
+<tr class="row-even"><td>Resource Group</td>
+<td>f5student#-rg</td>
+</tr>
+<tr class="row-odd"><td>Location</td>
+<td>East US</td>
+</tr>
+<tr class="row-even"><td>Admin Username</td>
+<td>azureuser</td>
+</tr>
+<tr class="row-odd"><td>Admin Password</td>
+<td>ChangeMeNow123!</td>
+</tr>
+<tr class="row-even"><td>DNS Label</td>
+<td>f5student#bigip</td>
+</tr>
+<tr class="row-odd"><td>Instance Name</td>
+<td>f5student#-f5vm01</td>
+</tr>
+<tr class="row-even"><td>Number of External IPs</td>
+<td>3</td>
+</tr>
+<tr class="row-odd"><td>Image Name</td>
+<td>Best25Mbps</td>
+</tr>
+<tr class="row-even"><td>BIG IP Modules</td>
+<td>ltm:nominal,asm:nominal</td>
+</tr>
+<tr class="row-odd"><td>Restricted Src Address</td>
+<td>0.0.0.0/0</td>
+</tr>
+</tbody>
+</table>
+<a class="reference internal image-reference" href="../_images/arm3nicv2.png"><img alt="../_images/arm3nicv2.png" src="../_images/arm3nicv2.png" style="width: 424.0px; height: 519.2px;" /></a>
+</li>
+<li><p class="first">Click the <strong>Review + Create</strong></p>
+</li>
+<li><p class="first">Click <strong>Create</strong> after confirming entries</p>
+</li>
+<li><p class="first">This will take appoximately 10 minutes</p>
+<ul class="simple">
+<li>You can monitor deployment on the azure dashboard by opening the Notifications in the azure portal.  Continue with the Lab. The deployment will complete by the time the BIG-IP configuration is required</li>
+<li>It may take a couple of minutes for your resources to show up</li>
+</ul>
+</li>
+<li><p class="first">Update Azure Network Security Group to allow required app ports</p>
+<ul class="simple">
+<li>click on <strong>f5student#-rg-ext-nsg</strong> to view inbound and outbound rules</li>
+</ul>
+<a class="reference internal image-reference" href="../_images/selectnsg.png"><img alt="../_images/selectnsg.png" src="../_images/selectnsg.png" style="height: 350px;" /></a>
+<ul class="simple">
+<li>click on <strong>inbound security rules</strong> in the left-hand side bar to view inbound rules</li>
+</ul>
+<a class="reference internal image-reference" href="../_images/selinbound.png"><img alt="../_images/selinbound.png" src="../_images/selinbound.png" style="height: 250px;" /></a>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>click <strong>Add</strong> and fill in table on right to with the following information:</dt>
+<dd><ul class="first last">
+<li>Destination Port Range: <strong>80</strong></li>
+<li>Protocol: <strong>TCP</strong></li>
+<li>Name: <strong>HTTP</strong></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>click <strong>Add</strong> on the bottom right</li>
+</ul>
+<a class="reference internal image-reference" href="../_images/inboundnsg.png"><img alt="../_images/inboundnsg.png" src="../_images/inboundnsg.png" style="height: 250px;" /></a>
+<ul class="simple">
+<li>repeat steps above to allow <strong>HTTPS</strong> (port 443) and port <strong>8081</strong></li>
+<li>final network security group should appear similar to image below.  If you don't see your rules click  <strong>Refresh</strong> next to <strong>Add</strong></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/extnsg.png"><img alt="../_images/extnsg.png" src="../_images/extnsg.png" style="height: 250px;" /></a>
+</li>
+</ol>
+</div>
+</div>
+
+
+     </div>
+    
+     <div class="row next-prev-btn-row">
+       <div class="col-lg-12">
+       
+        <a href="class01.html" title="WAF - Identifying the level of protection required for applications" accesskey="p" class="btn btn-primary left"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous</a>
+       
+       
+          <a href="restore-bigip.html" title="Restore BIG-IP LTM + AWAF" accesskey="n" class="btn btn-primary right">Next <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+       
+     </div>
+     </div>
+    
+
+    </article>
+  </div>
+
+</div>
+
+
+  <div id="clouddocs-footer"></div>
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+
+  <script src="../_static/js/index.js"></script>
+  <script src="../_static/js/jquery.appear.js"></script>
+  <script src="../_static/js/printThis.js"></script>
+  <script src="../_static/js/bootstrap.min.js"></script>
+  <script src="../_static/js/clouddocs.js"></script>
+  <script src="../_static/js/CoveoJsSearch.Lazy.min.js"></script>
+  </body>
+</html>
