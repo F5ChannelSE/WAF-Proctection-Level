@@ -5,7 +5,7 @@ Restore BIG-IP LTM + AWAF
 
    - click **notification icon** on top right to ensure arm deployment is complete
    .. image:: ./images/notification.png
-     :height: 250px
+     :height: 100px
 
    - search **f5student#bigip-mgmt-pip** to capture BIG-IP management public address (replace # with your student number)
    .. image:: ./images/searchbigip.png
@@ -23,29 +23,29 @@ Restore BIG-IP LTM + AWAF
 #. Download BIG-IP archive file
 
    - browse to **https://github.com/F5ChannelSE/WAF-Proctection-Level/blob/main/assets/base.ucs**
-   - rtclick **Download** and **save link as** to save base.ucs file locally
+   - rtclick **Download** and **Save link as** to save base.ucs file locally
 
 #. Upload **base.ucs** archive file to BIG-IP and restore
 
-   - browse to BIG-IP **system->archives** and click **upload**
-   - select **Choose File** and select **base.ucs** from the location you downloaded the file
+   - browse to BIG-IP **System->Archives** and click **upload**
+   - select **Choose File** and select **base.ucs** from the location you downloaded the file then selec **Upload**
    - click **base.ucs** after uploaded
-   - enter **base** for Restore Passphrase then click **Restore**.  This will take a few minutes to complete.
+   - enter **base** for Restore Passphrase then click **Restore**.  This will take a few minutes to complete.  Click **OK** and continue to next steps.
 
 #. Explore BIG-IP configuration
 
-   - browse to BIG-IP **Local Traffic->Virtual Servers** to list **hackazon_vs** and **juiceshop_vs**
+   - browse to BIG-IP **Local Traffic->Virtual Servers** to list **hackazon_vs** and **juiceshop_vs**.  (Refresh page after a few minutes before vs are listed)
 
-   .. image:: ./images/vslist.png
+   .. image:: ./images/vslistv2.png
      :height: 250px
 
 #. Test **hackazon_vs** virtual servers
 
-   - search **f5student#bigip-ext-pip0** to capture BIG-IP Virtual Server public address
+   - search for **f5student#bigip-ext-pip0** in Azure portal to capture BIG-IP Virtual Server public address
    .. image:: ./images/extpip0.png
      :height: 250px
 
-   - browse to **https://<f5student#bigip-ext-pip0>** 
+   - browse to **http://<f5student#bigip-ext-pip0>** 
    - browse to **http://<f5student#bigip-ext-pip0>:8081** 
 
 

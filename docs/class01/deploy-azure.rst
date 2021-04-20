@@ -61,7 +61,7 @@ Launch BIG-IP 3nic stack
    - click on **f5student#-rg-ext-nsg** to view inbound and outbound rules
 
    .. image:: ./images/selectnsg.png
-     :height: 250px
+     :height: 350px
 
    - click on **inbound security rules** to view inbound rules
 
