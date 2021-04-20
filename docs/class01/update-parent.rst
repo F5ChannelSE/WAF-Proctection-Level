@@ -30,3 +30,11 @@ In this short lab you will update the parent policy.  This will both demonstrate
 
       Staging allows the WAF administrator to review violations for new policy elements without actually blocking requests, thus lowering the chance of false positives affecting users.
 
+#. Wrap up and delete resource group
+
+   - browse to Azure **f5student#-rg** and select **"Delete resource group"**
+   - enter **f5student#-rg** and select **Delete** to confirm deletion of resource group
+   
+.. image:: .//images/deleterg.png
+   
+   

@@ -38,7 +38,7 @@ Launch BIG-IP 3nic stack
    +------------------------+--------------------------+
    | Instance Name          | f5student#-f5vm01        |
    +------------------------+--------------------------+
-   | Number of External IPs | 3                        |                      
+   | Number of External IPs | 1                        |                      
    +------------------------+--------------------------+
    | Image Name             | Best25Mbps               |
    +------------------------+--------------------------+
@@ -58,9 +58,24 @@ Launch BIG-IP 3nic stack
 
 #. Update Azure Network Security Group to allow required app ports
 
-   - browse to Azure portal and select **f5student#-rg** to view objects in your resource group
-   - search for **nsg** and select **f5student#-rg-ext-nsg** to view inbound and outbound rules
-   - click **Add** to **HTTPS** and **8081** to allow service ports **443** and **8081**
+   - click on **f5student#-rg-ext-nsg** to view inbound and outbound rules
+
+   .. image:: ./images/selectnsg.png
+     :height: 250px
+
+   - click on **inbound security rules** to view inbound rules
+
+   .. image:: ./images/selectinbound.png
+     :height: 250px
+
+   - click **Add** and fill in table on right to allow **HTTPS** then click **Add** on bottom right
+
+   .. image:: ./images/inboundnsg.png
+     :height: 250px
+
+   - repeat steps above to allow **HTTP** and **8081**
+
+   - final network security group should appear similar to image below
 
    .. image:: ./images/extnsg.png
      :height: 250px
