@@ -3,15 +3,15 @@ Restore BIG-IP LTM + AWAF
 
 #. Find the public IP addresses for BIG-IP
 
+   - click **notification icon** on top right to ensure arm deployment is complete
+   .. image:: ./images/notification.png
+     :height: 250px
+
    - search **f5student#bigip-mgmt-pip** to capture BIG-IP management public address (replace # with your student number)
    .. image:: ./images/searchbigip.png
      :height: 250px
 
    .. image:: ./images/bigipmgmt.png
-     :height: 250px
-
-   - search **f5student#bigip-ext-pip0** to capture BIG-IP Virtual Server public address
-   .. image:: ./images/extpip0.png
      :height: 250px
 
 #. Access the BIG-IP management GUI
@@ -39,15 +39,14 @@ Restore BIG-IP LTM + AWAF
    .. image:: ./images/vslist.png
      :height: 250px
 
-   - browse to BIG-IP **Security->Application Security** to list the waf policies restored
-
-   .. image:: ./images/waflist.png
-     :height: 250px
-
 #. Test **hackazon_vs** virtual servers
 
-  - browse to **https://<f5student#bigip-ext-pip0>** 
-  - browse to **http://<f5student#bigip-ext-pip0>:8081** 
+   - search **f5student#bigip-ext-pip0** to capture BIG-IP Virtual Server public address
+   .. image:: ./images/extpip0.png
+     :height: 250px
+
+   - browse to **https://<f5student#bigip-ext-pip0>** 
+   - browse to **http://<f5student#bigip-ext-pip0>:8081** 
 
 
 
