@@ -17,7 +17,7 @@ Restore BIG-IP LTM + AWAF
 #. Download BIG-IP archive file
 
    - browse to **https://github.com/F5ChannelSE/WAF-Proctection-Level/blob/main/assets/base.ucs**
-   - click **Download** to save wafbase.ucs file locally
+   - click **Download** to save base.ucs file locally
 
 #. Upload **wafbase.ucs** archive file to BIG-IP and restore
 
