@@ -15,16 +15,22 @@ Steps you will peform
 ~~~~~~~~~~~~~~~~~~~~~
 
 #. Deploy F5 BIG-IP LTM + AWAF to new 3-NIC Azure stack
-#. Launch common web attacks
 #. Restore BIG-IP LTM + AWAF for lab environment
-#. Work with WAF Policies
+#. Create WAF logging profile
+#. Create WAF Parent Policy
+#. Create Base WAF Child Policy
+#. Update Parent WAF Policy
+#. Create Credentials Protection WAF Child Policy
 
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
    
    deploy-azure
-   attack-web
    restore-bigip
-   waf-policies
+   create-waf
+   create-parent
+   create-child
+   update-parent
+
 
