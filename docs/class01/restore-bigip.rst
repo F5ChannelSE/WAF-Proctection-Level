@@ -5,10 +5,10 @@ Restore BIG-IP LTM + AWAF
 
    - search **f5student#bigip-mgmt-pip** to capture BIG-IP management public address
    .. image:: ./images/searchbigip.png
-   :height: 250px
+     :height: 250px
 
    .. image:: ./images/bigipmgmt.png
-   :height: 250px
+     :height: 250px
 
    - search **f5student#bigip-ext-pip0** to capture BIG-IP Virtual Server public address
    .. image:: ./images/extpip0.png
