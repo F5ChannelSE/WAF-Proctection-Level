@@ -42,7 +42,7 @@ Launch BIG-IP 3nic stack
    +------------------------+--------------------------+
    | Image Name             | Best25Mbps               |
    +------------------------+--------------------------+
-   | BIG IP Modules         | ltm:nominal,asm:nominal  |                      
+   | BIG IP Modules         | **ltm:nominal,asm:nominal ** |                      
    +------------------------+--------------------------+           
    | Restricted Src Address | 0.0.0.0/0                |
    +------------------------+--------------------------+ 
@@ -65,7 +65,7 @@ Launch BIG-IP 3nic stack
 
    - click on **inbound security rules** to view inbound rules
 
-   .. image:: ./images/selectinbound.png
+   .. image:: ./images/selinbound.png
      :height: 250px
 
    - click **Add** and fill in table on right to allow **HTTPS** then click **Add** on bottom right
