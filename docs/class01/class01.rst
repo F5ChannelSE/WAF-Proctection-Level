@@ -7,9 +7,9 @@ to the application servers. You will update the Azure network security group to
 allow proper protocol access.
 
 Once deployed you will work with AWAF policies to deploy the appropriate levels of protections
-•	Methods of Policy Management
-•	Identifying security features 
-•	Building Security policies
+   - Methods of Policy Management
+   - Identifying security features 
+   - Building Security policies
 
 Steps you will peform
 ~~~~~~~~~~~~~~~~~~~~~
