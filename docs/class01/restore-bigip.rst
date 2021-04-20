@@ -25,11 +25,11 @@ Restore BIG-IP LTM + AWAF
    - browse to **https://github.com/F5ChannelSE/WAF-Proctection-Level/blob/main/assets/base.ucs**
    - click **Download** to save base.ucs file locally
 
-#. Upload **wafbase.ucs** archive file to BIG-IP and restore
+#. Upload **base.ucs** archive file to BIG-IP and restore
 
    - browse to BIG-IP **system->archives** and click **upload**
-   - select **Choose File** and select **wafbase.ucs** from the location you downloaded the file
-   - click **wafbase.ucs** after uploaded
+   - select **Choose File** and select **base.ucs** from the location you downloaded the file
+   - click **base.ucs** after uploaded
    - enter **base** for Restore Passphrase then click **Restore**.  This will take a few minutes to complete.
 
 #. Explore BIG-IP configuration
